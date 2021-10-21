@@ -1,0 +1,78 @@
+
+  <div>
+    <h1>
+      Jobs Profiles
+
+    </h1>
+ 
+  
+
+    Email: 
+    {{email.value }}
+    <br>
+    Company: 
+    {{company.value}}
+    <br>
+    Address: 
+    {{address.value}}
+    <br>
+    Name: 
+    {{occupation.value}}
+    <br>
+    Job Position: 
+    {{position.value}}
+    
+  
+    <br>
+ 
+
+  </div>
+
+
+
+
+
+<mat-card class="login-page">
+  <mat-card-title>Jobs Profile (Reactive)</mat-card-title>
+  <mat-card-content>
+    <form class="login-form data-form" [formGroup]="form" (ngSumbit)="onSubmit()">
+      <mat-form-field>
+        <input matInput name="email"
+        formControlName = "email"
+         placeholder="Email"
+       
+       />
+      
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+         type="company" 
+         formControlName = "company"
+         name="company"
+         placeholder="Company Name"
+     
+          />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput 
+        type="address"
+        formControlName = "address"
+        placeholder="Address" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput
+         type="occupation"
+         formControlName = "occupation"
+         placeholder="Occupation" />
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput 
+        type="position" 
+        formControlName = "position"
+        placeholder="Job Position" />
+      </mat-form-field>
+      <button mat-stroked-button color="accent">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
